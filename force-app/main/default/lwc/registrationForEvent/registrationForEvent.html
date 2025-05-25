@@ -1,0 +1,10 @@
+<template>
+  <lightning-card title="Attendee Registration for Event">
+    <div class="slds-p-around_medium">
+      <lightning-flow
+        flow-api-name="RegistrationForEvent"
+        onstatuschange={handleStatusChange}>
+      </lightning-flow>
+    </div>
+  </lightning-card>
+</template>

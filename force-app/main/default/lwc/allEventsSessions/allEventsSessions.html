@@ -1,0 +1,35 @@
+<template>
+  <lightning-card title="All Events and Sessions">
+    <template if:true={eventsWithSessions.length}>
+      <template for:each={eventsWithSessions} for:item="evWrap">
+        <section key={evWrap.eventRecord.Id} class="event-section">
+          <h2>Event: {evWrap.eventRecord.Name} <p class="p">{evWrap.eventRecord.Status__c}</p></h2>
+
+          <template if:true={evWrap.sessionList.length}>
+            <ul class="session-list">
+              <template for:each={evWrap.sessionList} for:item="session">
+                <li key={session.Id} class="session-item">
+                  <span class="session-name">{session.Name}</span>
+                  <span class="session-time">
+                    {session.formattedStartTime} - {session.formattedEndTime}
+                  </span>
+                </li>
+              </template>
+            </ul>
+          </template>
+          <template if:false={evWrap.sessionList.length}>
+            <p>No sessions found for this event.</p>
+          </template>
+        </section>
+      </template>
+    </template>
+
+    <template if:true={error}>
+      <p class="error">Error: {error.body.message}</p>
+    </template>
+
+    <template if:true={showNoEventsMessage}>
+      <p>No events found.</p>
+    </template>
+  </lightning-card>
+</template>

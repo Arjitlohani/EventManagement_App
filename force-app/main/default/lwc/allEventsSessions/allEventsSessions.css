@@ -1,0 +1,41 @@
+.event-section {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.session-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.session-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.session-name {
+    font-weight: 600;
+}
+
+.session-time {
+    font-style: italic;
+    color: #555;
+}
+
+.event-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.event-section p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    margin-left: 2rem;
+}
